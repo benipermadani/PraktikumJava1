@@ -1,7 +1,9 @@
 import javax.swing.JOptionPane;
+import java.util.Scanner;
 
 public class DataTypes {
     public static void main(String[] args) {
+        Scanner scanner=new Scanner(System.in);
 
         String namaDepan = "Beni";
         String namaTengah = " ";
@@ -12,7 +14,19 @@ public class DataTypes {
         char nilaiAbjad = 'A';
         boolean tampan = true;
 
-        System.out.println("Nama Depan : " + namaDepan);
+        System.out.println("Nama Depan : ");
+        namaDepan=scanner.nextLine();
+        System.out.println("Usia : " );
+        usia=scanner.nextInt();
+        System.out.println("IPK :" + ipk);
+        ipk=scanner.nextDouble();
+        System.out.println("Nilai nilai Abjad");
+        nilaiAbjad=scanner.next().charAt(0);
+        System.out.println("Tampan :");
+        tampan=scanner.nextBoolean();
+        
+
+        System.out.println("==================OUTPUT==================");
         System.out.println("Nama Tengah : " + namaTengah);
         System.out.println("Nama Belakang : " + namaBelakang);
         System.out.println("Usia : " + usia);
@@ -21,7 +35,8 @@ public class DataTypes {
         System.out.println("Nilai PBO :" + nilaiAbjad);
         System.out.println("Tampan :" + tampan);
         JOptionPane.showMessageDialog(null, "Hai, " +namaDepan + namaTengah + namaBelakang);
-        
+
+
 
     }
 }
